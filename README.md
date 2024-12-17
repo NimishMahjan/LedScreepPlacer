@@ -1,3 +1,91 @@
+My Project
+A React-based project for configuring and visualizing screen installations with options for niche dimensions, and receptacle boxes, and downloading the final configuration as a PDF.
+Features
+Canvas Visualization:
+Displays TV screens, niche boxes, receptacle boxes, and floor lines.
+Adjustable parameters for screen dimensions, niche gaps, and installation type (niche/flat wall).
+Configuration Panel:
+Dropdowns to select screens, media players, mounts, and receptacle boxes.
+Toggle buttons for screen orientation (horizontal/vertical) and installation type (niche/flat wall).
+Input fields to customize niche gap, floor distance, and niche depth variance.
+Info Panel:
+Displays selected screen dimensions, niche dimensions, and receptacle box dimensions.
+PDF Download:
+Allows users to fill out project details and download the configuration as a PDF.
+Tech Stack
+Frontend: React, Material-UI
+PDF Generation: html2canvas, jsPDF
+Version Control: Git and GitHub
+Project Structure
+my-project/
+│-- public/
+│-- src/
+│   ├── Components/
+│   │   ├── Canvas/
+│   │   │   ├── Canvas.js
+│   │   │   ├── DrawTV.js
+│   │   │   ├── DrawNicheBox.js
+│   │   │   ├── DrawReceptacle.js
+│   │   │   └── DrawFloorLine.js
+│   │   ├── Configuration.js
+│   │   ├── InfoPanel.js
+│   │   ├── DimensionsCard.js
+│   │   ├── NotesCard.js
+│   │   ├── ProjectInfoCard.js
+│   │   ├── DropDown.js
+│   │   ├── CustomToggleButton.js
+│   │   ├── CustomTextField.js
+│   │   └── DownloadButton.js
+│   ├── Utils/
+│   │   └── utils.js
+│   ├── App.js
+│   ├── index.js
+│   └── App.css
+└── README.md
+
+How to Install and Run the Project
+1. Clone the Repository
+git clone https://github.com/your-username/my-project.git
+cd my-project
+
+2. Install Dependencies
+npm install
+
+3. Run the Project
+npm start
+
+This will run the app in development mode. Open http://localhost:3000 to view it in the browser.
+Usage Guide
+Select Options:
+Use the Configuration Panel to select screen, media player, mount, and receptacle box from the dropdowns.
+Adjust parameters like floor distance, niche depth, and niche gap using the input fields.
+View Visualization:
+The Canvas updates dynamically based on the selected options and parameters.
+Download PDF:
+Fill out the Project Details (Project Title, Drawer, Department, Screen Size, Date) and click the Download button to export the configuration as a PDF.
+Troubleshooting
+Dependencies Not Installing:
+Ensure Node.js and npm are installed:
+node -v
+npm -v
+Port Conflict:
+If port 3000 is in use, run:
+npx kill-port 3000
+
+Contributing
+Contributions are welcome! Please follow these steps:
+Fork the repository.
+Create a new branch:
+git checkout -b feature-branch
+Make your changes.
+Commit your changes:
+git commit -m "Add new feature"
+Push to your branch:
+git push origin feature-branch
+Submit a pull request.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
