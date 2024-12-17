@@ -16,32 +16,6 @@ Tech Stack
 Frontend: React, Material-UI
 PDF Generation: html2canvas, jsPDF
 Version Control: Git and GitHub
-Project Structure
-my-project/
-│-- public/
-│-- src/
-│   ├── Components/
-│   │   ├── Canvas/
-│   │   │   ├── Canvas.js
-│   │   │   ├── DrawTV.js
-│   │   │   ├── DrawNicheBox.js
-│   │   │   ├── DrawReceptacle.js
-│   │   │   └── DrawFloorLine.js
-│   │   ├── Configuration.js
-│   │   ├── InfoPanel.js
-│   │   ├── DimensionsCard.js
-│   │   ├── NotesCard.js
-│   │   ├── ProjectInfoCard.js
-│   │   ├── DropDown.js
-│   │   ├── CustomToggleButton.js
-│   │   ├── CustomTextField.js
-│   │   └── DownloadButton.js
-│   ├── Utils/
-│   │   └── utils.js
-│   ├── App.js
-│   ├── index.js
-│   └── App.css
-└── README.md
 
 How to Install and Run the Project
 1. Clone the Repository
