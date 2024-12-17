@@ -1,0 +1,55 @@
+/* App.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Three columns: Canvas (2fr), Info Panel (1fr), Configuration (1fr) */
+  grid-template-rows: 1fr; /* Single row */
+  gap: 10px;
+  height: 100%;
+}
+
+/* Canvas Container */
+.canvas-container {
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Info Panel */
+.info-panel {
+  grid-column: 2 / 3;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto; /* In case the content overflows */
+}
+
+/* Configuration Panel */
+.configuration-panel {
+  grid-column: 3 / 4;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto; /* In case the content overflows */
+}
