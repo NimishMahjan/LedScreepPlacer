@@ -5,32 +5,35 @@ import CustomCard from "./CustomCard";
 import { TextField, Typography, Box } from "@mui/material";
 
 const Configuration = ({
-  dataMapping = {},
-  selectedItems = {},
-  setSelectedItems,
-  handleDropdownChange,
-  setOrientation,
-  setInstallationType,
-  floorDistance,
-  setFloorDistance,
-  nicheDepthVar,
-  setNicheDepthVar,
-  nicheGap,
-  setNicheGap,
-  screenSize,
+  dataMapping = {}, // Object containing data for dropdowns
+  selectedItems = {}, // Object containing selected items for each dropdown
+  setSelectedItems, // Function to update selected items
+  handleDropdownChange, // Function to handle dropdown changes
+  setOrientation, // Function to set screen orientation
+  setInstallationType, // Function to set installation type
+  floorDistance, // Floor distance value
+  setFloorDistance, // Function to update floor distance
+  nicheDepthVar, // Niche depth variance value
+  setNicheDepthVar, // Function to update niche depth variance
+  nicheGap, // Niche gap value
+  setNicheGap, // Function to update niche gap
+  screenSize, // Screen size in inches
 }) => {
+  // Set the default niche gap based on the screen size
   useEffect(() => {
     if (screenSize) {
-      setNicheGap(screenSize <= 55 ? 1.5 : 2);
+      setNicheGap(screenSize <= 55 ? 1.5 : 2); // 1.5" for screens <= 55", 2" for screens > 55"
     }
   }, [screenSize, setNicheGap]);
+
   return (
     <Box className="configuration" sx={{ fontSize: "0.9em" }}>
+      {/* Section Title */}
       <Typography variant="h6" sx={{ marginBottom: "5px" }}>
         Configuration
       </Typography>
 
-      {/* Dropdowns for Screen, Media Player, Mount, and Receptacle Box */}
+      {/* Dropdown for selecting Screen */}
       <DropDown
         data={dataMapping?.screen || []}
         valueField="Screen MFR"
@@ -39,6 +42,8 @@ const Configuration = ({
         value={selectedItems.screen || ""}
         heading="Screen"
       />
+
+      {/* Dropdown for selecting Media Player */}
       <DropDown
         data={dataMapping?.media || []}
         valueField="MFG. PART"
@@ -47,6 +52,8 @@ const Configuration = ({
         value={selectedItems.media || ""}
         heading="Media Player"
       />
+
+      {/* Dropdown for selecting Mount */}
       <DropDown
         data={dataMapping?.mount || []}
         valueField="MFG. PART"
@@ -55,6 +62,8 @@ const Configuration = ({
         value={selectedItems.mount || ""}
         heading="Mount"
       />
+
+      {/* Dropdown for selecting Receptacle Box */}
       <DropDown
         data={dataMapping?.receptacle || []}
         valueField="MFG. PART"
@@ -64,7 +73,7 @@ const Configuration = ({
         heading="Receptacle Box"
       />
 
-      {/* Orientation Toggle Buttons */}
+      {/* Toggle Buttons for Orientation (Vertical or Horizontal) */}
       <Box sx={{ display: "flex", gap: "10px", marginTop: "5px" }}>
         <CustomToggleButton
           selectedValue={selectedItems.orientation}
@@ -74,6 +83,7 @@ const Configuration = ({
         />
       </Box>
 
+      {/* Toggle Buttons for Installation Type (Niche or Flat Wall) */}
       <Box sx={{ display: "flex", gap: "10px", marginTop: "5px" }}>
         <CustomToggleButton
           selectedValue={selectedItems.installationType}
@@ -83,7 +93,7 @@ const Configuration = ({
         />
       </Box>
 
-      {/* Floor Distance Input Field */}
+      {/* Input Field for Floor Distance */}
       <TextField
         label="Floor Distance"
         variant="outlined"
@@ -99,7 +109,7 @@ const Configuration = ({
         sx={{ marginTop: "5px" }}
       />
 
-      {/* Niche Depth Input Field */}
+      {/* Input Field for Niche Depth Variance */}
       <TextField
         label="Niche Depth Var"
         variant="outlined"
@@ -115,7 +125,7 @@ const Configuration = ({
         sx={{ marginTop: "5px" }}
       />
 
-      {/* Niche Gap Input Field */}
+      {/* Input Field for Niche Gap */}
       <TextField
         label="Niche Gap (inches)"
         variant="outlined"
@@ -131,7 +141,7 @@ const Configuration = ({
         sx={{ marginTop: "5px" }}
       />
 
-      {/* Custom Card for Description */}
+      {/* Custom Card for Additional Description */}
       <Box className="custom-card" sx={{ marginTop: "5px" }}>
         <CustomCard title="Description" />
       </Box>

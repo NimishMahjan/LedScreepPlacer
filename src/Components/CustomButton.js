@@ -7,6 +7,7 @@ const CustomButton = ({
   color,
   fullWidth = true,
   onClick,
+  disabled,
   children,
 }) => {
   return (
@@ -15,6 +16,7 @@ const CustomButton = ({
       variant={variant}
       color={color}
       fullWidth={fullWidth}
+      disabled={disabled}
       onClick={onClick}
     >
       {children}
