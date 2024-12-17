@@ -1,20 +1,36 @@
 My Project
 A React-based project for configuring and visualizing screen installations with options for niche dimensions, and receptacle boxes, and downloading the final configuration as a PDF.
+
 Features
+
 Canvas Visualization:
+
 Displays TV screens, niche boxes, receptacle boxes, and floor lines.
+
 Adjustable parameters for screen dimensions, niche gaps, and installation type (niche/flat wall).
+
 Configuration Panel:
+
 Dropdowns to select screens, media players, mounts, and receptacle boxes.
+
 Toggle buttons for screen orientation (horizontal/vertical) and installation type (niche/flat wall).
+
 Input fields to customize niche gap, floor distance, and niche depth variance.
+
 Info Panel:
+
 Displays selected screen dimensions, niche dimensions, and receptacle box dimensions.
+
 PDF Download:
+
 Allows users to fill out project details and download the configuration as a PDF.
+
 Tech Stack
+
 Frontend: React, Material-UI
+
 PDF Generation: html2canvas, jsPDF
+
 Version Control: Git and GitHub
 
 How to Install and Run the Project
