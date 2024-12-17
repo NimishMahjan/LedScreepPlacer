@@ -19,7 +19,7 @@ Version Control: Git and GitHub
 
 How to Install and Run the Project
 1. Clone the Repository
-git clone https://github.com/your-username/my-project.git
+git clone https://github.com/NimishMahjan/LedScreepPlacer.git
 cd my-project
 
 2. Install Dependencies
